@@ -3,6 +3,7 @@ import MenuItem from "./MenuItem";
 import { IoIosHome } from "react-icons/io";
 import { FaCircleInfo } from "react-icons/fa6";
 import Link from "next/link";
+import DarkModeSwitch from "./DarkModeSwitch";
 
 export default function Header() {
   return (
@@ -11,12 +12,15 @@ export default function Header() {
         <MenuItem title="Home" url="/" icon={<IoIosHome />} />
         <MenuItem title="About" url="/about" icon={<FaCircleInfo />} />
       </div>
-      <Link href="/" className="flex items-center gap-1">
-        <span className="bg-amber-300 px-2 py-1 text-2xl font-bold rounded-md">
-          IMDB
-        </span>
-        <span className="hidden sm:inline">Clone</span>
-      </Link>
+      <div className="flex items-center gap-4">
+        <DarkModeSwitch />
+        <Link href="/" className="flex items-center gap-1">
+          <span className="bg-amber-300 px-2 py-1 text-2xl font-bold rounded-md">
+            IMDB
+          </span>
+          <span className="hidden sm:inline">Clone</span>
+        </Link>
+      </div>
     </div>
   );
 }
