@@ -14,14 +14,14 @@ export default function DarkModeSwitch() {
           onClick={() => {
             setTheme("light");
           }}
-          className="text-xl cursor-pointer hover:text-amber-500"
+          className="text-2xl cursor-pointer hover:text-amber-500"
         />
       ) : (
         <IoIosMoon
           onClick={() => {
             setTheme("dark");
           }}
-          className="text-xl cursor-pointer hover:text-amber-500"
+          className="text-2xl cursor-pointer hover:text-amber-500"
         />
       )}
     </div>
